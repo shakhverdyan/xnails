@@ -1,0 +1,36 @@
+@import 'variables';
+
+
+.contact {
+
+
+  &__adress {
+    margin-left: size(30px);
+
+    @include breakpoint(md) {
+      margin-left: 0;
+      margin-bottom: size(30px);
+    }
+
+    p,
+    a {
+      display: block;
+      margin-bottom: size(30px);
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+
+
+    @include breakpoint(md) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__item {
+    flex-basis: 50%;
+  }
+}

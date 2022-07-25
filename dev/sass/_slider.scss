@@ -1,0 +1,113 @@
+@import 'variables';
+
+
+.main-slider {
+  &-wrap-item {
+    position: relative;
+  }
+
+  &-item {
+    max-width: size(1170px);
+    margin: 0 auto;
+
+    @include breakpoint(sm) {
+      text-align: center;
+      display: block;
+    }
+
+    img {
+      max-width: 100%;
+
+      @include breakpoint(md) {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+  }
+
+  &__text {
+    max-width: size(500px);
+    padding: size(30px);
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(60px);
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7%;
+
+    @include breakpoint(lg) {
+      right: 3%;
+    }
+
+    @include breakpoint(md) {
+      right: 10%;
+      padding: size(10px);
+      backdrop-filter: blur(12px);
+      max-width: size(386px);
+    }
+
+    @include breakpoint(sm) {
+      position: static;
+      inset: 0;
+      transform: translateY(0%);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: size(10px);
+      font-size: $h3;
+      line-height: size(40px);
+      font-weight: 400;
+
+      @include breakpoint(md) {
+        font-size: 28px;
+        line-height: size(30px);
+      }
+    }
+
+    p {
+      margin-bottom: size(10px);
+      font-size: $mainSize;
+      line-height: size(24px);
+
+      @include breakpoint(md) {
+        font-size: 16px;
+        line-height: size(18px);
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      font-size: $mainSize;
+      line-height: size(24px);
+
+      @include breakpoint(md) {
+        font-size: 16px;
+        line-height: size(18px);
+      }
+    }
+  }
+
+}
+
+.swiper-pagination-bullet-active {
+  background: #9DA57C;
+  border: 0.5px solid #000000;
+}
+
+.swiper-pagination-bullet {
+  background: #9DA57C;
+  border: 0.5px solid #000000;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @include breakpoint(sm) {
+    bottom: 2px;
+    position: relative;
+  }
+}

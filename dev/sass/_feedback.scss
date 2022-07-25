@@ -1,0 +1,138 @@
+@import 'variables';
+
+
+
+
+
+.feedback {
+
+
+
+  position: relative;
+
+  &__slider-block {
+    min-width: 0;
+
+    @include breakpoint(md) {
+      grid-row: span 2;
+      grid-column: span 2;
+      margin-top: -50px;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: 20px;
+    }
+  }
+
+  &-image {
+    grid-row: span 2;
+    text-align: right;
+
+    @include breakpoint(xl) {
+      width: size(250px)
+    }
+
+    @include breakpoint(ssm) {
+      display: none;
+    }
+
+    img {
+      @include breakpoint(lg) {
+        width: 222px;
+        height: 338px;
+      }
+
+      @include breakpoint(sm) {
+        width: 138px;
+        height: auto;
+      }
+    }
+
+  }
+
+  &__text-block {
+
+    min-width: 0;
+    grid-row: span 1;
+
+    @include breakpoint(md) {
+      grid-row: span 2;
+      margin: auto;
+    }
+
+    @include breakpoint(ssm) {
+      grid-column: span 2;
+    }
+  }
+
+  // .feedback__wrap
+
+  &__wrap {
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 25px;
+
+  }
+
+  // .feedback__title
+
+  &__title {
+    flex-basis: 67%;
+    text-align: left !important;
+    font-size: $h63  !important;
+
+    @include breakpoint(lg) {
+      font-size: 50px !important;
+    }
+
+    @include breakpoint(md) {
+      font-size: 40px !important;
+      line-height: size(44px) !important;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 24px !important;
+      line-height: size(28px) !important;
+    }
+
+    span {
+      text-align: right;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  // .feedback__slider-block
+
+  &__slide-item {
+
+    div {
+      span {
+        padding-left: size(30px);
+        margin-bottom: size(10px);
+        display: inline-block;
+      }
+    }
+
+    &-text {
+
+      max-width: size(550px);
+      margin: size(30px) auto 0;
+      padding: 0 40px;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    top: 70%;
+    color: #000000;
+  }
+
+  .swiper-button-next {
+    right: 0;
+    top: 70%;
+    color: #000000;
+  }
+}

@@ -1,0 +1,71 @@
+// color 
+$linkColor: #181818;
+$blackColor: #000000;
+
+
+// bg-color 
+$whiteGreen: #E3EBC1;
+$bg: #ffffff;
+$bg-top: #FFFAF3;
+$bg-hover: #D4DCB2;
+
+//font-size
+$linkSize: size(18px);
+$mainSize: size(18px);
+$text: size(18px);
+$h1: size(80px);
+$count: size(72px);
+$h2: size(72px);
+$h3: size(36px);
+$h63: size(63px);
+
+
+
+@function size($px, $rem: 16px) {
+  @return $px/$rem*1rem;
+}
+
+
+@mixin breakpoint($point) {
+  @if $point==xxxl {
+    @media (max-width:1900px) {
+      @content;
+    }
+  }
+
+  @if $point==xxl {
+    @media (max-width:1400px) {
+      @content;
+    }
+  }
+
+  @else if $point==xl {
+    @media (max-width:1080px) {
+      @content;
+    }
+  }
+
+  @else if $point==lg {
+    @media (max-width:992px) {
+      @content;
+    }
+  }
+
+  @else if $point==md {
+    @media (max-width:768px) {
+      @content;
+    }
+  }
+
+  @else if $point==sm {
+    @media (max-width:576px) {
+      @content;
+    }
+  }
+
+  @else if $point==ssm {
+    @media (max-width:376px) {
+      @content;
+    }
+  }
+}
